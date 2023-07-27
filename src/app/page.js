@@ -9,7 +9,7 @@ export default function RegisFormPage() {
   const [plan, setPlan] = useState("");
   const [planError,setPlanError] = useState(false);
   const [gender, setGender] = useState(null);
-  const [genderError,setGenderError] = useState(false);
+  const [genderError,setGenderError] = useState(true);
   const [buyBottle, setBuyBottle] = useState(false);
   const [buyShoes, setBuyShoes] = useState(false);
   const [buyCap, setBuyCap] = useState(false);
@@ -164,7 +164,7 @@ export default function RegisFormPage() {
             checked={gender === "female"}
           />
           Female 👩
-          {!genderError && rgOnClick && (
+          {genderError && rgOnClick && (
             <div className="text-danger">Please select gender</div>
           )}
         </div>
