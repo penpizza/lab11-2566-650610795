@@ -13,7 +13,7 @@ export default function RegisFormPage() {
   const [buyBottle, setBuyBottle] = useState(false);
   const [buyShoes, setBuyShoes] = useState(false);
   const [buyCap, setBuyCap] = useState(false);
-  const [isUserAgreed, setIsUserAgree] = useState(false);
+  const [isUserAgree, setIsUserAgree] = useState(false);
   const [rgOnClick,setRgOnClick] = useState(false);
 
   const isUserAgreedOnChange = (event) => {
@@ -217,7 +217,7 @@ export default function RegisFormPage() {
       <div>
         <input className="me-2" type="checkbox"
         onChange={isUserAgreedOnChange}
-        checked = {isUserAgreed}
+        checked = {isUserAgree}
         />I agree to the terms and
         conditions
       </div>
@@ -228,7 +228,7 @@ export default function RegisFormPage() {
         onClick={registerBtnOnClick}
 
         //You can embbed a state like below to disabled the button
-        disabled={!isUserAgreed}
+        disabled={!isUserAgree}
       >
         Register
       </button>
